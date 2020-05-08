@@ -13,6 +13,7 @@ button {
 a {
   text-decoration: none;
   display: block;
+  color: inherit;
 }
 
 h1 {
@@ -24,7 +25,7 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 span,
@@ -84,6 +85,9 @@ img {
 }
 
 .btn-primary {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   display: block;
   background: #2381fbcc;
   color: white;
@@ -188,6 +192,10 @@ img {
 
 .line {
   margin: 25px 0px !important;
+}
+
+.slick-track {
+  padding: 25px 0px;
 }
 
 @-webkit-keyframes levitation {
@@ -640,14 +648,75 @@ img {
 }
 
 .teacher-list .teacher__item {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 650px !important;
+  margin-top: 25px !important;
+  padding: 0px !important;
+  max-width: 375px !important;
+  margin-bottom: 25px !important;
+  padding-bottom: 45px !important;
+}
+
+.teacher-list .teacher__item p {
+  margin-bottom: 15px;
+}
+
+.teacher-list .teacher__item-photo img {
+  max-width: unset !important;
+  margin: unset !important;
+  height: 300px !important;
+}
+
+.teacher-list .teacher__item-prof {
+  margin: 0px auto 10px auto !important;
+}
+
+.teacher-list .teacher__item-text, .teacher-list .teacher__item-prof, .teacher-list .teacher__item-name {
+  max-width: unset !important;
+  height: auto !important;
+  margin: auto;
+}
+
+.teacher-list .teacher__item-text h3, .teacher-list .teacher__item-prof h3, .teacher-list .teacher__item-name h3 {
+  font-size: 14px;
+  height: auto !important;
+  margin-bottom: 0px !important;
+}
+
+.teacher-list .teacher__item-name {
+  max-width: unset !important;
+}
+
+.teacher-list .teacher__item-text {
+  height: 145px !important;
+  overflow: hidden;
+}
+
+.teacher-list .teacher__item-text p:last-child {
+  margin-bottom: 0px;
+}
+
+.teacher-list .teacher__item-btn a {
+  margin-top: 10px;
+  padding: 10px 15px !important;
 }
 
 .teacher-list .teacher__item .teacher__item-name h3 {
   height: 50px;
   margin-bottom: 15px;
+}
+
+.teacher-list .teacher__item:hover {
+  -webkit-transform: unset !important;
+          transform: unset !important;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 
 .laboratories-wrapper .laboratories {
@@ -816,7 +885,12 @@ img {
   padding: 25px 15px;
   height: 435px;
   position: relative;
-  border-right: 10px solid #f3f3f3;
+  max-width: 280px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #333333;
 }
 
 .news-wrapper .news__item-img img {
@@ -847,12 +921,20 @@ img {
 
 .news-wrapper .news__item-title {
   font-size: 14px;
+  line-height: 190%;
+  color: #333333;
+  font-weight: 300;
 }
 
 .news-wrapper .news__item-btn {
   position: absolute;
   bottom: 25px;
   left: 15px;
+}
+
+.news-wrapper .news__item:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
 }
 
 .teacher-wrapper {
@@ -908,36 +990,65 @@ img {
 }
 
 .teacher-wrapper .teacher__item {
-  padding: 0px 15px;
-  text-align: center;
-  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transition: 0.75s;
   transition: 0.75s;
+  max-width: 280px;
+  height: 375px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding-bottom: 15px;
+  margin: auto;
 }
 
 .teacher-wrapper .teacher__item-photo img {
   display: block;
-  margin: auto;
-  max-width: 245px;
+  margin: 0px auto 15px auto;
+  width: 100%;
+  height: 200px;
 }
 
 .teacher-wrapper .teacher__item-name {
+  padding: 0px 15px;
   margin: 10px 0px;
-  height: 76px;
-  max-width: 250px;
-  margin: 10px auto;
+}
+
+.teacher-wrapper .teacher__item-name h3 {
+  font-size: 16px;
+}
+
+.teacher-wrapper .teacher__item-text {
+  padding: 0px 15px;
+  margin-bottom: 15px;
 }
 
 .teacher-wrapper .teacher__item-prof {
-  max-width: 250px;
-  margin: 10px auto;
+  font-weight: 400;
+  padding: 0px 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.teacher-wrapper .teacher__item-btn {
+  padding: 0px 15px;
+}
+
+.teacher-wrapper .teacher__item-btn a {
+  position: absolute;
+  bottom: 25px;
+  left: 15px;
 }
 
 .teacher-wrapper .teacher__item:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-transition: 0.75s;
-  transition: 0.75s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
 }
 
 .form-wrapper .form {
@@ -1022,6 +1133,15 @@ img {
 .email {
   background: #55ACEE;
   color: white;
+}
+
+.teacher .slick-slide > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 1200px) {

@@ -5,12 +5,60 @@
     align-items: flex-start;
     padding: 45px 0px;
     .teacher__item {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 650px !important;
+        margin-top: 25px !important;
+        padding: 0px !important;
+        max-width: 375px !important;
+        margin-bottom: 25px !important;
+        padding-bottom: 45px !important;
+        p {
+            margin-bottom: 15px;
+        }
+        &-photo img {
+            max-width: unset !important;
+            margin: unset !important;
+            height: 300px !important;
+        }
+        &-prof {
+            margin: 0px auto 10px auto !important;
+        }
+        &-text,
+        &-prof,
+        &-name {
+            max-width: unset !important;
+            height: auto !important;
+            margin: auto;
+            h3 {
+                font-size: 14px;
+                height: auto !important;
+                margin-bottom: 0px !important;
+            }
+        }
+        &-name {
+            max-width: unset !important;
+        }
+        &-text {
+            height: 145px !important;
+            overflow: hidden;
+            p:last-child {
+                margin-bottom: 0px;
+            }
+        }
+        &-btn {
+            a {
+                margin-top: 10px;
+                padding: 10px 15px !important;
+            }
+        }
         .teacher__item-name h3 {
             height: 50px;
             margin-bottom: 15px;
         }
+    }
+    .teacher__item:hover {
+        transform: unset !important;
+        transition: none !important;
     }
 }
