@@ -145,7 +145,7 @@ img {
 
 @import 'component/navbar';
 @import 'component/footer';
-@import 'page';
+
 @import 'animation';
 @import 'page/news';
 @import 'page/contacts';
@@ -154,4 +154,4 @@ img {
 @import 'page/docs';
 @import 'page/history';
 @import 'page/questions';
-
+@import 'page';
