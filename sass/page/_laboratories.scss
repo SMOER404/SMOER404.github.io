@@ -1,0 +1,15 @@
+.laboratories-wrapper {
+    
+    .laboratories {
+        padding: 45px 0px;
+        * {
+            margin-bottom: 10px;
+        }
+        h3 {
+            width: fit-content;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #33333324;
+        }
+    }
+}

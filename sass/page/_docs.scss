@@ -1,0 +1,19 @@
+.docs-wrapper {
+    .docs {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 45px 0px;
+        h2 {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #80808045;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        img {
+            margin-left: 25px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.teacher-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 45px 0px;
+    .teacher__item {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+        .teacher__item-name h3 {
+            height: 50px;
+            margin-bottom: 15px;
+        }
+    }
+}

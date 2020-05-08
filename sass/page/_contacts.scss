@@ -1,0 +1,21 @@
+.contacts {
+    margin-top: 25px;
+    &__tel {
+        margin-bottom: 25px;
+        &-item {
+            margin-bottom: 15px;
+            strong {
+                display: block;
+                margin-bottom: 10px;
+            }
+            a {
+                display: block;
+                color: black;
+                margin: 10px 0;
+            }
+        }
+    }
+    &__address {
+
+    }
+}

@@ -1,0 +1,119 @@
+@import '../mixin';
+@import '../variables';
+
+
+
+.header {
+    height: auto;
+    .navbar__wrapper {
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            padding: 10px 0px;
+            &__logo {
+                padding: 5px 0px;
+                a img {
+                    max-width: 100px;
+                }
+            }
+            &__menu {
+                display: flex;
+                justify-content: flex-start;
+                a {
+                    display: block;
+                    font-weight: 300;
+                    color: #333333;
+                    margin-right: 20px;
+                    transition: all 0.2s ease-in-out;
+                }
+                a:hover {
+                    color: black;
+                    transform: translateY(-1px);
+                
+                }
+                a:last-child {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+    .banner__wrapper {
+        background: linear-gradient(110deg, #0a58f3 40%, rgba(0,0,0,0) 30%),radial-gradient(farthest-corner at 0% 0%, #004eccde 70%, #3f81ff 70%);
+        padding: 180px 0px 50px;
+        .banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            h1 {
+                margin-bottom: 15px;
+                color: white;
+                font-weight: bold;
+                max-width: 360px;
+            }
+            p {
+                color: white;
+                font-size: 16px;
+                max-width: 450px;
+                margin: 10px 0px;
+            }
+            .btn-lg {
+                margin-top: 25px;
+            }
+        }
+        .banner__img {
+            margin-top: -70px;
+        }
+    }
+}
+.navbar__menu-mobile {
+    height: 0px;
+    background: white;
+    transition: 1s height ease-in-out;
+    overflow: hidden;
+    background: #0a58f3;
+    a:first-child {
+        margin-top: 0px;
+    }
+    a {
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+}
+.navbar__menu-mobile--contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    a {
+        height: 50px;
+        img {
+            margin-right: 25px;
+        }
+    }
+}
+.navbar__menu-mobile.open {
+    height: 100vh;
+    transition: 1s height ease-in-out;
+}
+/* Create a sticky/fixed navbar */
+#navbar {
+    background: white;
+    overflow: hidden;
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    position: fixed; /* Sticky/fixed navbar */
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  

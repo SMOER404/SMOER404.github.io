@@ -1,0 +1,38 @@
+.questions {
+    padding: 45px 0px;
+    &-item {
+        margin-bottom: 30px;
+        &__info {
+            margin-bottom: 10px;
+             * {
+                font-size: 14px;
+                color: grey;
+                margin-bottom: 10px;
+             }
+            .count {
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .date {
+
+            }
+            .time {
+    
+            }
+            .name {
+    
+            }
+        }
+        &__questions {
+            padding: 15px;
+            background: #8080801a;
+            margin-bottom: 10px;
+            p {
+                font-style: italic;
+            }
+        }
+        &__answer {
+            padding: 0px 15px;
+        }
+    }
+}
