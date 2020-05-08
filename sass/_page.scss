@@ -1,6 +1,6 @@
 
 .news-wrapper {
-    height: 630px;
+
     padding: 45px 0;
     background-color: #f3f3f3;
     .news-header {
@@ -119,7 +119,7 @@
             display: flex;
             transition: 0.75s;
             max-width: 280px;
-            height: 375px;
+            height: 400px;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
             transition: 0.3s;
             padding-bottom: 15px;
@@ -137,11 +137,10 @@
             &-name {
                 padding: 0px 15px;
                 margin: 10px 0px;
-                
-                // max-width: 250px;
-                // margin: 10px auto;
                 h3 {
+                    font-weight: 900;
                     font-size: 16px;
+                    min-height: 60px;
                 }
             }
             &-text {
@@ -149,7 +148,7 @@
                 margin-bottom: 15px;
             }
             &-prof {
-                font-weight: 400;
+                font-weight: 500;
                 padding: 0px 15px;
                 margin-bottom: 15px;
                 // max-width: 250px;

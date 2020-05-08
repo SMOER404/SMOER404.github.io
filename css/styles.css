@@ -696,6 +696,7 @@ img {
 .teacher-list .teacher__item-text {
   height: 145px !important;
   overflow: hidden;
+  font-weight: 300;
 }
 
 .teacher-list .teacher__item-text p:last-child {
@@ -823,7 +824,6 @@ img {
 }
 
 .news-wrapper {
-  height: 630px;
   padding: 45px 0;
   background-color: #f3f3f3;
 }
@@ -997,7 +997,7 @@ img {
   -webkit-transition: 0.75s;
   transition: 0.75s;
   max-width: 280px;
-  height: 375px;
+  height: 400px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.3s;
@@ -1019,7 +1019,9 @@ img {
 }
 
 .teacher-wrapper .teacher__item-name h3 {
+  font-weight: 900;
   font-size: 16px;
+  min-height: 60px;
 }
 
 .teacher-wrapper .teacher__item-text {
@@ -1028,7 +1030,7 @@ img {
 }
 
 .teacher-wrapper .teacher__item-prof {
-  font-weight: 400;
+  font-weight: 500;
   padding: 0px 15px;
   margin-bottom: 15px;
   font-size: 14px;
