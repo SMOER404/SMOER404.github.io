@@ -24,15 +24,19 @@
                 justify-content: flex-start;
                 a {
                     display: block;
+                    font-size: 16px;
                     font-weight: 300;
                     color: #333333;
                     margin-right: 20px;
                     transition: all 0.2s ease-in-out;
                 }
+                .active {
+                    color: black;
+                    font-weight: 400;
+                }
                 a:hover {
                     color: black;
-                    transform: translateY(-1px);
-                
+                    transform: translateY(-2px);
                 }
                 a:last-child {
                     margin-right: 0px;
@@ -84,6 +88,9 @@
         justify-content: center;
         align-items: center;
         color: white;
+    }
+    a.active {
+        font-weight: 600;
     }
 }
 .navbar__menu-mobile--contact {

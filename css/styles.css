@@ -1,10 +1,12 @@
+@charset "UTF-8";
 body {
   font-family: "Open Sans", sans-serif;
   color: #333333;
-  margin-top: 151px;
+  margin-top: 140px;
 }
 
-a, button {
+a,
+button {
   cursor: pointer;
 }
 
@@ -15,11 +17,20 @@ a {
 
 h1 {
   font-size: 36px;
-  line-height: 190%;
-  font-weight: 300;
 }
 
-span, p, a, strong {
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+span,
+p,
+a,
+strong {
   font-size: 14px;
   line-height: 150%;
 }
@@ -32,8 +43,13 @@ span, p, a, strong {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 300;
+  line-height: 190%;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -204,6 +220,88 @@ img {
   }
 }
 
+/* ----- Дергающийся кнопка ----- */
+@keyframes cycle {
+  35% {
+    -webkit-transform: rotate(0) translate(0, 0);
+            transform: rotate(0) translate(0, 0);
+  }
+  40% {
+    -webkit-transform: rotate(5deg) translate(0, -2px);
+            transform: rotate(5deg) translate(0, -2px);
+  }
+  45% {
+    -webkit-transform: rotate(-3deg) translate(0, -2px);
+            transform: rotate(-3deg) translate(0, -2px);
+  }
+  50% {
+    -webkit-transform: rotate(5deg) translate(0, -2px);
+            transform: rotate(5deg) translate(0, -2px);
+  }
+  55% {
+    -webkit-transform: rotate(-3deg) translate(0, -2px);
+            transform: rotate(-3deg) translate(0, -2px);
+  }
+  60% {
+    -webkit-transform: rotate(5deg) translate(0, -2px);
+            transform: rotate(5deg) translate(0, -2px);
+  }
+  65% {
+    -webkit-transform: rotate(-3deg) translate(0, -2px);
+            transform: rotate(-3deg) translate(0, -2px);
+  }
+  70% {
+    -webkit-transform: rotate(0) translate(0, 0);
+            transform: rotate(0) translate(0, 0);
+  }
+}
+
+@-webkit-keyframes cycle {
+  35% {
+    -webkit-transform: rotate(0) translate(0, 0);
+            transform: rotate(0) translate(0, 0);
+  }
+  40% {
+    -webkit-transform: rotate(5deg) translate(0, -2px);
+            transform: rotate(5deg) translate(0, -2px);
+  }
+  45% {
+    -webkit-transform: rotate(-3deg) translate(0, -2px);
+            transform: rotate(-3deg) translate(0, -2px);
+  }
+  50% {
+    -webkit-transform: rotate(5deg) translate(0, -2px);
+            transform: rotate(5deg) translate(0, -2px);
+  }
+  55% {
+    -webkit-transform: rotate(-3deg) translate(0, -2px);
+            transform: rotate(-3deg) translate(0, -2px);
+  }
+  60% {
+    -webkit-transform: rotate(5deg) translate(0, -2px);
+            transform: rotate(5deg) translate(0, -2px);
+  }
+  65% {
+    -webkit-transform: rotate(-3deg) translate(0, -2px);
+            transform: rotate(-3deg) translate(0, -2px);
+  }
+  70% {
+    -webkit-transform: rotate(0) translate(0, 0);
+            transform: rotate(0) translate(0, 0);
+  }
+}
+
+/* ----- Animated button END ----- */
+.animated_button {
+  color: white;
+  min-height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  -webkit-animation: cycle 4s linear infinite;
+          animation: cycle 4s linear infinite;
+}
+
 .header {
   height: auto;
 }
@@ -241,6 +339,7 @@ img {
 
 .header .navbar__wrapper .navbar__menu a {
   display: block;
+  font-size: 16px;
   font-weight: 300;
   color: #333333;
   margin-right: 20px;
@@ -248,10 +347,15 @@ img {
   transition: all 0.2s ease-in-out;
 }
 
+.header .navbar__wrapper .navbar__menu .active {
+  color: black;
+  font-weight: 400;
+}
+
 .header .navbar__wrapper .navbar__menu a:hover {
   color: black;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .header .navbar__wrapper .navbar__menu a:last-child {
@@ -326,6 +430,10 @@ img {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+}
+
+.navbar__menu-mobile a.active {
+  font-weight: 600;
 }
 
 .navbar__menu-mobile--contact {
@@ -803,6 +911,8 @@ img {
   padding: 0px 15px;
   text-align: center;
   cursor: pointer;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
 }
 
 .teacher-wrapper .teacher__item-photo img {
@@ -813,11 +923,19 @@ img {
 
 .teacher-wrapper .teacher__item-name {
   margin: 10px 0px;
+  height: 76px;
+  max-width: 250px;
+  margin: 10px auto;
+}
+
+.teacher-wrapper .teacher__item-prof {
+  max-width: 250px;
+  margin: 10px auto;
 }
 
 .teacher-wrapper .teacher__item:hover {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
   -webkit-transition: 0.75s;
   transition: 0.75s;
 }
@@ -872,6 +990,40 @@ img {
   margin: 45px auto 25px auto;
 }
 
+.icon-bar {
+  position: fixed;
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  -webkit-transform: scale(0.9, 0.9);
+          transform: scale(0.9, 0.9);
+}
+
+.tel {
+  background: #ffaf00;
+  color: white;
+}
+
+.email {
+  background: #55ACEE;
+  color: white;
+}
+
 @media (max-width: 1200px) {
   .header .banner__wrapper .banner__img {
     margin-top: 0px;
@@ -879,16 +1031,20 @@ img {
   .docs .pull-right {
     float: unset !important;
   }
+  .header .banner__wrapper {
+    padding: 50px 0px;
+  }
 }
 
 @media (max-width: 992px) {
-  .docs-wrapper .docs h1,
-  h1 {
-    font-size: 28px;
+  .docs-wrapper .docs h1 {
     margin-bottom: 15px;
   }
+  h1 {
+    font-size: 28px;
+  }
   body {
-    margin-top: 85px;
+    margin-top: 79px;
   }
   .navbar__menu {
     display: none !important;

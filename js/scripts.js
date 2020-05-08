@@ -25,9 +25,9 @@ $('.news').slick({
       breakpoint: 1200,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         infinite: true,
-        dots: true
+        dots: false
       }
     },
     {
@@ -56,7 +56,7 @@ $('.teacher').slick({
   dots: false,
   infinite: true,
   speed: 600,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   nextArrow: '.next_teacher',
   prevArrow: '.previous_teacher',

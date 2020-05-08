@@ -4,41 +4,63 @@
 body {
     font-family: $fontFamily;
     color: #333333;
-    margin-top: 151px;
+    margin-top: 140px;
 }
 
-a, button {
+a,
+button {
     cursor: pointer;
 }
+
 a {
     text-decoration: none;
     display: block;
 }
+
 h1 {
     font-size: 36px;
-    line-height: 190%;
-    font-weight: 300;
 }
-span, p, a, strong {
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+span,
+p,
+a,
+strong {
     font-size: 14px;
     line-height: 150%;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     outline: none;
     padding: 0;
 }
-h1,h2,h3,h4,h5 {
+
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-weight: 300;
+    line-height: 190%;
     font-family: $fontFamily;
 }
+
 img {
     object-fit: cover;
 }
+
 .btn-outline {
     display: block;
-    background:  transparent;
+    background: transparent;
     color: white;
     border: 2px solid white;
     font-weight: 300;
@@ -47,17 +69,20 @@ img {
     border-radius: 15px;
     transition: 0.3s all ease-out;
 }
+
 .btn-outline:hover {
     transition: 0.3s all ease-out;
     transform: translateY(-2px);
 }
+
 .btn-lg {
     padding: 10px 25px;
     font-size: 16px;
 }
+
 .btn-primary {
     display: block;
-    background:  $colorDefault;
+    background: $colorDefault;
     color: white;
     font-weight: 300;
     padding: 5px 10px;
@@ -65,25 +90,28 @@ img {
     border-radius: 15px;
     transition: 0.3s all ease-out;
 }
+
 .btn-primary:hover {
-    background:  $colorDefaultHover;
+    background: $colorDefaultHover;
     transition: 0.3s all ease-out;
     transform: translateY(-2px);
 }
+
 .input {
     background: #FFFFFF;
     border-radius: 50px;
-    height: 72px; 
+    height: 72px;
     color: #828282;
     padding: 26px 44px;
     border: 1px solid #E0E0E0;
 }
+
 .input::placeholder {
     color: #828282;
 }
-.input:focus {
-   
-}
+
+.input:focus {}
+
 .btn-submit {
     border-radius: 40px;
     padding: 22px 140px;
@@ -92,13 +120,16 @@ img {
     background: $colorDefault;
     transition: 0.3s background ease-out;
 }
+
 .btn-submit:hover {
-    background:  $colorDefaultHover;
+    background: $colorDefaultHover;
     transition: 0.3s background ease-out;
 }
+
 .text-center {
     text-align: center;
 }
+
 .tags {
     text-transform: lowercase;
     border-radius: 12px;
@@ -109,38 +140,163 @@ img {
     display: block;
     margin-right: 5px;
 }
+
 .tags-primary {
     background-color: $colorDefault;
 }
+
 .tags-warning {
     background-color: #f0ad4e;
 }
+
 .tags-success {
     background-color: #5cb85c;
 }
+
 .levitation {
     transform: translatey(0px);
-	animation: levitation 3s ease-in-out infinite;
+    animation: levitation 3s ease-in-out infinite;
 }
+
 .wrapper {
     padding: 65px 0px;
 }
+
 .ml-15 {
     margin-left: 15px;
 }
+
 .line {
     margin: 25px 0px !important;
 }
+
 @keyframes levitation {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-20px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+/* ----- Дергающийся кнопка ----- */
+
+@keyframes cycle {
+    35% {
+        transform: rotate(0) translate(0, 0);
+    }
+
+    40% {
+        transform: rotate(5deg) translate(0, -2px);
+    }
+
+    45% {
+        transform: rotate(-3deg) translate(0, -2px);
+    }
+
+    50% {
+        transform: rotate(5deg) translate(0, -2px);
+    }
+
+    55% {
+        transform: rotate(-3deg) translate(0, -2px);
+    }
+
+    60% {
+        transform: rotate(5deg) translate(0, -2px);
+    }
+
+    65% {
+        transform: rotate(-3deg) translate(0, -2px);
+    }
+
+    70% {
+        transform: rotate(0) translate(0, 0);
+    }
+}
+
+@-moz-keyframes cycle {
+    35% {
+        transform: rotate(0) translate(0, 0);
+    }
+
+    40% {
+        transform: rotate(5deg) translate(0, -2px);
+    }
+
+    45% {
+        transform: rotate(-3deg) translate(0, -2px);
+    }
+
+    50% {
+        transform: rotate(5deg) translate(0, -2px);
+    }
+
+    55% {
+        transform: rotate(-3deg) translate(0, -2px);
+    }
+
+    60% {
+        transform: rotate(5deg) translate(0, -2px);
+    }
+
+    65% {
+        transform: rotate(-3deg) translate(0, -2px);
+    }
+
+    70% {
+        transform: rotate(0) translate(0, 0);
+    }
+}
+
+@-webkit-keyframes cycle {
+    35% {
+        transform: rotate(0) translate(0, 0);
+    }
+
+    40% {
+        transform: rotate(5deg) translate(0, -2px);
+    }
+
+    45% {
+        transform: rotate(-3deg) translate(0, -2px);
+    }
+
+    50% {
+        transform: rotate(5deg) translate(0, -2px);
+    }
+
+    55% {
+        transform: rotate(-3deg) translate(0, -2px);
+    }
+
+    60% {
+        transform: rotate(5deg) translate(0, -2px);
+    }
+
+    65% {
+        transform: rotate(-3deg) translate(0, -2px);
+    }
+
+    70% {
+        transform: rotate(0) translate(0, 0);
+    }
+}
+
+/* ----- Animated button END ----- */
+
+.animated_button {
+    color: white;
+    min-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    animation: cycle 4s linear infinite;
 }
 
 @import 'component/navbar';
