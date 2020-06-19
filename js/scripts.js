@@ -168,7 +168,10 @@ $('.calc').click(function(){
   var selectedSpec = $('#spec option:selected').val();
   var selectedLevel = $('#level option:selected').val();
   var selectedYear = $('#year option:selected').val();
+  var selectedYearCount = $('#year option:selected').text();
   var result;
+  var summ;
+  var summYear = selectedSpec * selectedYearCount;
 
   function removeClass() {
     $('.cost-form .select-selected').removeClass('warning');
@@ -176,26 +179,86 @@ $('.calc').click(function(){
   $('.cost-result').fadeIn(500);
 
   if(selectedLevel == 1 && selectedForm == 1){
+
     selectedSpec = 174000;
     result = selectedSpec - selectedSpec / 100 * selectedYear;
+    cost = selectedSpec / 100 * selectedYear;
+    
+    summ = selectedSpec * selectedYearCount - selectedSpec / 100 * selectedYear;
+  
+    
     $('#result').empty().text(result);
-  }else if(selectedLevel == 2 && selectedForm == 1){
+    $('#cost').empty().text(cost);
+    $('#summ').empty().text(summ);
+    $('#summCost').empty().text(summ);
+
+
+  } else if (selectedLevel == 2 && selectedForm == 1){
+
     selectedSpec = 186000;
     result = selectedSpec - (selectedSpec / 100 * selectedYear);
+    cost = selectedSpec / 100 * selectedYear;
     $('#result').empty().text(result);
-  }else if(selectedLevel == 1 && selectedForm == 2){
+    $('#cost').empty().text(cost);
+
+  } else if (selectedLevel == 1 && selectedForm == 2){
+
     selectedSpec = 60000;
     console.log(selectedSpec);
     result = selectedSpec - (selectedSpec / 100 * selectedYear);
+    cost = selectedSpec / 100 * selectedYear;
     $('#result').empty().text(result);
-  }else if(selectedLevel == 2 && selectedForm == 2){
+    $('#cost').empty().text(cost);
+
+  } else if (selectedLevel == 2 && selectedForm == 2){
+
     selectedSpec = 80000;
     console.log(selectedSpec);
     result = selectedSpec - (selectedSpec / 100 * selectedYear);
+    cost = selectedSpec / 100 * selectedYear;
     $('#result').empty().text(result);
-  }else {
+    $('#cost').empty().text(cost);
+  } else if (selectedLevel == 3 && selectedForm == 1){
+
+    selectedSpec = 205000;
+    console.log(selectedSpec);
+    result = selectedSpec - (selectedSpec / 100 * selectedYear);
+    cost = selectedSpec / 100 * selectedYear;
+    $('#result').empty().text(result);
+    $('#cost').empty().text(cost);
+  } else if (selectedLevel == 3 && selectedForm == 2){
+
+    selectedSpec = 70000;
+    console.log(selectedSpec);
+    result = selectedSpec - (selectedSpec / 100 * selectedYear);
+    cost = selectedSpec / 100 * selectedYear;
+    $('#result').empty().text(result);
+    $('#cost').empty().text(cost);
+  } else {
     $('.cost-form select').siblings('.select-selected').addClass('warning');
     setTimeout(removeClass, 1000);
   }
 });
 /* условия по калькулятору */
+
+document.getElementById("defaultOpen").click();
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}

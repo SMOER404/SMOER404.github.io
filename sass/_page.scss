@@ -197,6 +197,19 @@
         }
     }
 }
+.cost-table {
+    h2 {
+        margin: 15px 0px;
+    }
+}
+#result-container, #cost {
+    font-size: 22px;
+}
+#result, #cost, #summ, #summCost {
+    font-size: 25px;
+    color: #4f9afc;
+    font-weight: 300;
+}
 .cost-form {
     border-bottom: 1px solid #E0E0E0;
     min-height: 400px;
@@ -205,7 +218,6 @@
     }
     .cost-result {
         display: none;
-        height: 50px;
     }
     .cost-submit {
         margin-top: 45px;
@@ -214,13 +226,14 @@
     }
 }
 .cost-result {
-    margin: 45px 0px 0px;
+    margin: 25px 0px 0px;
     padding: 0px 15px;
-    #result {
-        font-size: 25px;
-        color: #4f9afc;
-        font-weight: 300;
-    }
+}
+.citate {
+    width: 500px;
+    background: #8080802b;
+    padding: 15px;
+    margin-top: 45px;  
 }
 
 .load-more {
@@ -333,6 +346,50 @@
     z-index: 99;
     border-radius: 8px;
 
+  }
+
+  /* Style the tab */
+.tab {
+    overflow: hidden;
+    background: #8080801a;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+  }
+
+  .tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
   }
 
   /* Hide the items when the select box is closed: */
