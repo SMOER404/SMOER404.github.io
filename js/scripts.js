@@ -185,12 +185,11 @@ $('.calc').click(function(){
     cost = selectedSpec / 100 * selectedYear;
     
     summ = selectedSpec * selectedYearCount - selectedSpec / 100 * selectedYear;
-  
-    
+    $('#summ').empty().text(summ);
     $('#result').empty().text(result);
     $('#cost').empty().text(cost);
-    $('#summ').empty().text(summ);
-    $('#summCost').empty().text(summ);
+    
+    $('#summCost').empty().text(summCost);
 
 
   } else if (selectedLevel == 2 && selectedForm == 1){
@@ -198,6 +197,8 @@ $('.calc').click(function(){
     selectedSpec = 186000;
     result = selectedSpec - (selectedSpec / 100 * selectedYear);
     cost = selectedSpec / 100 * selectedYear;
+    summ = selectedSpec * selectedYearCount - selectedSpec / 100 * selectedYear;
+    $('#summ').empty().text(summ);
     $('#result').empty().text(result);
     $('#cost').empty().text(cost);
 
@@ -207,6 +208,8 @@ $('.calc').click(function(){
     console.log(selectedSpec);
     result = selectedSpec - (selectedSpec / 100 * selectedYear);
     cost = selectedSpec / 100 * selectedYear;
+    summ = selectedSpec * selectedYearCount - selectedSpec / 100 * selectedYear;
+    $('#summ').empty().text(summ);
     $('#result').empty().text(result);
     $('#cost').empty().text(cost);
 
@@ -216,6 +219,8 @@ $('.calc').click(function(){
     console.log(selectedSpec);
     result = selectedSpec - (selectedSpec / 100 * selectedYear);
     cost = selectedSpec / 100 * selectedYear;
+    summ = selectedSpec * selectedYearCount - selectedSpec / 100 * selectedYear;
+    $('#summ').empty().text(summ);
     $('#result').empty().text(result);
     $('#cost').empty().text(cost);
   } else if (selectedLevel == 3 && selectedForm == 1){
@@ -226,6 +231,8 @@ $('.calc').click(function(){
     cost = selectedSpec / 100 * selectedYear;
     $('#result').empty().text(result);
     $('#cost').empty().text(cost);
+    summ = selectedSpec * selectedYearCount - selectedSpec / 100 * selectedYear;
+    $('#summ').empty().text(summ);
   } else if (selectedLevel == 3 && selectedForm == 2){
 
     selectedSpec = 70000;
@@ -234,6 +241,8 @@ $('.calc').click(function(){
     cost = selectedSpec / 100 * selectedYear;
     $('#result').empty().text(result);
     $('#cost').empty().text(cost);
+    summ = selectedSpec * selectedYearCount - selectedSpec / 100 * selectedYear;
+    $('#summ').empty().text(summ);
   } else {
     $('.cost-form select').siblings('.select-selected').addClass('warning');
     setTimeout(removeClass, 1000);

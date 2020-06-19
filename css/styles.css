@@ -27,6 +27,38 @@ h3 {
   font-size: 22px;
 }
 
+input::-webkit-input-placeholder,
+input,
+span,
+p,
+a,
+strong {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+input:-ms-input-placeholder,
+input,
+span,
+p,
+a,
+strong {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+input::-ms-input-placeholder,
+input,
+span,
+p,
+a,
+strong {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+input::placeholder,
+input,
 span,
 p,
 a,
@@ -1163,7 +1195,6 @@ img {
 }
 
 .citate {
-  width: 500px;
   background: #8080802b;
   padding: 15px;
   margin-top: 45px;
