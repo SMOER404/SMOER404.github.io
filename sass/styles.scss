@@ -4,7 +4,6 @@
 body {
     font-family: $fontFamily;
     color: #333333;
-    margin-top: 140px;
 }
 
 a,
@@ -167,13 +166,30 @@ img {
 .ml-15 {
     margin-left: 15px;
 }
-
+.mb-20 {
+    margin-bottom: 10px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
 .line {
     margin: 25px 0px !important;
 }
 
 .slick-track {
     padding: 25px 0px;
+}
+.list-title {
+    margin-bottom: 45px;
+}
+.list-header {
+    padding: 15px 0px;
+    background: #4f9afc;
+    color: white;
+}
+.list-item {
+    padding: 15px 0px;
+    background: #80808026;
 }
 
 @keyframes levitation {

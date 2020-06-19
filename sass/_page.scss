@@ -119,19 +119,19 @@
             display: flex;
             transition: 0.75s;
             max-width: 280px;
-            height: 400px;
+            height: 475px;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
             transition: 0.3s;
+            padding-top: 15px;
             padding-bottom: 15px;
             // border-radius: 5px;
             margin: auto;
             &-photo {
                 img {
                     display: block;
-                    margin: 0px auto 15px auto;
+                    margin: 0px 0px 15px 15px;
                     // border-radius: 5px 5px 0 0;
-                    width: 100%;
-                    height: 200px;
+                    height: 245px;
                 }
             }
             &-name {
@@ -159,7 +159,7 @@
                 padding: 0px 15px;
                 a {
                     position: absolute;
-                    bottom: 25px;
+                    bottom: 15px;
                     left: 15px;
                 }
             }
@@ -170,12 +170,15 @@
         }
     }
 }
-
 .form-wrapper {
     .form {
         height: 469px;
         h1 {
             margin-top: 81px;
+            margin-bottom: 0px;
+        }
+        .subtitle {
+            font-size: 16px;
             margin-bottom: 70px;
         }
         &__inner {
@@ -192,6 +195,31 @@
             display: flex;
             justify-content: center;
         }
+    }
+}
+.cost-form {
+    border-bottom: 1px solid #E0E0E0;
+    min-height: 400px;
+    h1 {
+        margin-bottom: 45px;
+    }
+    .cost-result {
+        display: none;
+        height: 50px;
+    }
+    .cost-submit {
+        margin-top: 45px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.cost-result {
+    margin: 45px 0px 0px;
+    padding: 0px 15px;
+    #result {
+        font-size: 25px;
+        color: #4f9afc;
+        font-weight: 300;
     }
 }
 
@@ -252,6 +280,73 @@
     display: flex;
     justify-content: center;
 }
+
+.custom-select {
+    position: relative;
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background: #2381fbcc;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background: #2381fb;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 8px;
+
+  }
+
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover {
+    background-color: rgb(58, 141, 249);
+  }
+
+  .select-selected.warning{
+    border: 2px solid #e06060;
+  }
 
 @media (max-width: 1200px) {
     .header .banner__wrapper .banner__img {
