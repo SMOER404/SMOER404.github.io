@@ -28,6 +28,8 @@ h2 {
 h3 {
     font-size: 22px;
 }
+.input-message,
+.input-message::placeholder,
 input::placeholder,
 input,
 span,
@@ -98,7 +100,30 @@ img {
     transition: 0.3s all ease-out;
     transform: translateY(-2px);
 }
-
+.form-question__wrapper {
+    display: none;
+}
+.form-question {
+    display: flex;
+    flex-direction: column;
+}
+.form-question {
+    margin-top: 25px;
+    .input-message,
+    .input {
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .btn-submit{
+        padding: 22px 50px; 
+    }
+    
+}
+.input-message {
+    height: 300px !important;
+    font-family: 'Open Sans', sans-serif;
+}
+.input-message,
 .input {
     background: #FFFFFF;
     border-radius: 50px;
@@ -107,13 +132,69 @@ img {
     padding: 26px 44px;
     border: 1px solid #E0E0E0;
 }
-
+.citate {
+    background: #8080802b;
+    padding: 15px;
+    margin-top: 45px;  
+}
+.input-message,
 .input::placeholder {
     color: #828282;
 }
+.popup-overlay {
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+}
+.message-succes {
+    width: 500px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -300px;
+    position: fixed;
+    background: white;
+    padding: 45px;
+    border-radius: 25px;
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    a {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: -35px;
+    top: -35px;
+        svg{
+            fill: white;
+        }
+    }
+}
+
 
 .input:focus {}
 
+.question-btn {
+    margin-top: 25px;
+    border-radius: 40px;
+    padding: 22px 50px;
+    border: none;
+    color: white;
+    background: $colorDefault;
+    transition: 0.3s background ease-out;
+}
+
+.question-btn:hover {
+    background: $colorDefaultHover;
+    transition: 0.3s all ease-out;
+    transform: translateY(-2px);
+}
 .btn-submit {
     border-radius: 40px;
     padding: 22px 140px;
