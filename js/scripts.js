@@ -1,3 +1,5 @@
+$('.js-phone-mask').mask("+7(000) 000-0000");
+
 $('.news').slick({
   dots: false,
   infinite: true,
@@ -234,6 +236,7 @@ $('.calc').click(function(){
 
 $('.feedback-btn').click(function(){
   $('body input').val("");
+  $('body textarea').val("");
   $('.feedback-overlay').fadeIn(500);
 });
 
@@ -244,6 +247,9 @@ $('.close-btn').click(function(){
 $('.question-btn').click(function(){
   $('.form-question__wrapper').toggle(500);
 })
+
+
+
 document.getElementById("defaultOpen").click();
 function openCity(evt, cityName) {
   // Declare all variables

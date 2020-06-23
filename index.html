@@ -33,17 +33,17 @@
                             <a href="questions.html" class="navbar__menu-item">Вопрос-ответ</a>
                             <a href="contacts.html" class="navbar__menu-item иет">Контакты</a>
                         </div>
-                        <a class="burger-menu hidden-md hidden-lg">
+                        <a class="burger-menu hidden-lg">
                             <img src="img/main/burder-btn.png" alt="">
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="navbar__menu-mobile hidden-md hidden-lg" id="mobile-menu">
-                <a href="history.html" class="navbar-mobile__menu-item">История</a>
+            <div class="navbar__menu-mobile hidden-lg" id="mobile-menu">
+                <a href="index.html" class="navbar-mobile__menu-item">Главная</a>
                 <a href="news.html" class="navbar-mobile__menu-item">Новости</a>
+                <a href="study.html" class="navbar-mobile__menu-item">Направления обучения</a>
                 <a href="teacher.html" class="navbar__menu-item">Преподаватели</a>
-                <a href="laboratories.html" class="navbar-mobile__menu-item">Лаборатории</a>
                 <a href="docs.html" class="navbar-mobile__menu-item">Научная работа</a>
                 <a href="questions.html" class="navbar-mobile__menu-item">Вопрос-ответ</a>
                 <a href="contacts.html" class="navbar-mobile__menu-item иет">Контакты</a>
@@ -352,6 +352,8 @@
                                     <option value="">Выбрать</option>
                                     <option value="174000">Прикладная информатика в экономике
                                     </option>
+                                    <option value="174000">Информатика и вычислительная техника
+                                    </option>
                                 </select>
                             </div>
                         </div>
@@ -427,17 +429,17 @@
             <div class="container">
                 <div class="row">
                     <div class="form">
-                        <h1 class="text-center">Остались вопросы?
-                            
+                        <h1 class="text-center">Свяжитесь с нами
                         </h1>
-                        <p class="subtitle text-center">Свяжитесь с нами!</p>
+                        <p class="subtitle text-center">Оставьте заявку и наш менеджер перезвонит вам!</p>
                         <div class="form__inner">
-                            <input type="text" placeholder="Введите имя" name="name" class="input form__input" required>
-                            <input type="text" placeholder="Введите почту" name="email" class="input form__input"
+
+                            <input type="text" placeholder="Введите имя" name="name" class="input form__input"
                                 required>
+                            <input type="text" placeholder="Введите номер телефона" name="phone" class="input form__input js-phone-mask" required>
                         </div>
                         <div class="form__btn">
-                            <button  src="" class="btn-submit feedback-btn">Написать</button>
+                            <button  src="" class="btn-submit feedback-btn">Отправить</button>
                         </div>
                     </div>
                 </div>
@@ -529,7 +531,9 @@
             </div>
         </div>
     </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/mask.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
